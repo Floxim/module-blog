@@ -9,16 +9,16 @@ class Controller extends \Floxim\Main\Page\Controller
 
     public function doList()
     {
-        $this->listen('query_ready', function (System\Finder $query) {
-            $query->with('tags');
+        $this->listen('query_ready', function ($e) {
+            $e['query']->with('tags');
         });
         return parent::doList();
     }
 
     public function doListByTag()
     {
-        $this->listen('query_ready', function ($query) {
-            $query->where('tags.id', fx::env('page_id'));
+        $this->listen('query_ready', function ($e) {
+            $q['query']->where('tags.id', fx::env('page_id'));
         });
         return $this->doList();
     }
@@ -95,7 +95,8 @@ class Controller extends \Floxim\Main\Page\Controller
     public function doListInfoblock()
     {
         if (isset($_GET['month'])) {
-            $this->listen('query_ready', function (System\Finder $query) {
+            $this->listen('query_ready', function ($e) {
+                $query = $e['query'];
                 list($month, $year) = explode(".", $_GET['month']);
                 $start = $year . '-' . $month . '-01, 00:00:00';
                 $end = $year . '-' . $month . '-' . date('t', strtotime($start)) . ', 23:59:59';
