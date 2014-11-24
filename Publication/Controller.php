@@ -18,7 +18,7 @@ class Controller extends \Floxim\Main\Page\Controller
     public function doListByTag()
     {
         $this->listen('query_ready', function ($e) {
-            $q['query']->where('tags.id', fx::env('page_id'));
+            $e['query']->where('tags.id', fx::env('page_id'));
         });
         return $this->doList();
     }
