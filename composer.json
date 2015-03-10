@@ -1,0 +1,5 @@
+{
+  "name" : "floxim/module-blog",
+  "description" : "Floxim blog/news module.",
+  "type" : "floxim-module"
+}
