@@ -120,7 +120,7 @@ class Controller extends \Floxim\Main\Page\Controller
             ->getContentInfoblocks($this->getContentType());
         $pages_id = array();
         foreach ($infoblocks as $infoblock) {
-            if (isset($infoblock['params']['parent_type']) and $infoblock['params']['parent_type'] == 'current_page_id') {
+            if (!$infoblock['params']['is_pass_through']) {
                 // Retrieve all pages
                 $pages_id = array_merge($pages_id, $infoblock->getPages());
             } else {
