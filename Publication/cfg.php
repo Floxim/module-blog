@@ -14,7 +14,7 @@ return array(
             'name' => $component['name'].fx::alang(' by tag'),
             'icon_extra' => 'tag',
             'check_context' => function($page) {
-                return $page->isInstanceof('tag');
+                return $page && $page->isInstanceof('tag');
             }
         ),
         '*calendar' => array(
