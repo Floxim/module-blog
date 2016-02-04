@@ -135,7 +135,7 @@ class Controller extends \Floxim\Main\Page\Controller
         /**
          * Retrieve pages object
          */
-        $pages = fx::data('page')->where('id', $pages_id)->all();
+        $pages = fx::data('floxim.main.page')->where('id', $pages_id)->all();
         return $pages;
     }
 }

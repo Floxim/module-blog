@@ -12,7 +12,7 @@ class Entity extends \Floxim\Main\Content\Entity
             return;
         }
 
-        return fx::data('page', $this['parent_id']);
+        return $this['parent'];
     }
 
     protected function afterInsert()
