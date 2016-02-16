@@ -15,14 +15,6 @@ class Controller extends \Floxim\Main\Page\Controller
         return parent::doList();
     }
 
-    public function doListByTag()
-    {
-        $this->listen('query_ready', function ($e) {
-            $e['query']->where('tags.id', fx::env('page_id'));
-        });
-        return $this->doList();
-    }
-
     protected function getPublicationPage()
     {
         $infoblock_id = $this->getParam('source_infoblock_id');
