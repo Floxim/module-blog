@@ -10,7 +10,8 @@ class Controller extends \Floxim\Main\Page\Controller
     public function doList()
     {
         $this->listen('query_ready', function ($e) {
-            $e['query']->with('tags');
+            //fx::log($e['query']);
+            //$e['query']->with('tags');
         });
         return parent::doList();
     }
