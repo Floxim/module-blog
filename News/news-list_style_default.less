@@ -1,0 +1,23 @@
+.news-list_style_default {
+    @sub_margin:@layout_padding_vertical / 2;
+    #__item {
+        margin-bottom:@layout_padding_vertical;
+        padding-bottom:@layout_padding_vertical;
+        border-bottom:1px solid @color_light_inverted;
+    }
+    
+    #__date, #__image, #__anounce {
+        margin-bottom: @sub_margin;
+        &:last-child {
+            margin-bottom:0;
+        }
+    }
+    
+    #__date {
+        .color_transparent('light');
+    }
+    
+    #__anounce {
+        .text();
+    }
+}
