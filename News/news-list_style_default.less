@@ -3,7 +3,8 @@
     #__item {
         margin-bottom:@layout_padding_vertical;
         padding-bottom:@layout_padding_vertical;
-        border-bottom:1px solid @color_light_inverted;
+        border-bottom:1px solid;
+        .tcolor(main 5, border-bottom-color);
     }
     
     #__date, #__image, #__anounce {
@@ -14,7 +15,7 @@
     }
     
     #__date {
-        .color_transparent('light');
+        .tcolor(main, 2);
     }
     
     #__anounce {

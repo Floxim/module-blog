@@ -13,7 +13,7 @@
             {apply floxim.ui.date:date with $date = $publish_date /}
         </div>
         
-        <div fx:if="$image" fx:e="image">
+        <div fx:aif="$image" fx:e="image">
             <img src="{$image | 'max-height:500; max-width:800'}" alt="{$name}" />
         </div>
         <div fx:e="anounce">{$description}</div>
