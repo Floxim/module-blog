@@ -1,7 +1,9 @@
 <?php
 namespace Floxim\Blog\News;
 
-class Controller extends \Floxim\Blog\Publication\Controller
+use Floxim\Floxim\System\Fx as fx;
+
+class Controller extends \Floxim\Main\Page\Controller 
 {
 
 }

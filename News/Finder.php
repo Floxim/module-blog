@@ -1,7 +1,9 @@
 <?php
 namespace Floxim\Blog\News;
 
-class Finder extends \Floxim\Blog\Publication\Finder
+use Floxim\Floxim\System\Fx as fx;
+
+class Finder extends \Floxim\Main\Page\Finder 
 {
 
 }
